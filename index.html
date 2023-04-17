@@ -9,15 +9,17 @@
 </head>
 <body>
     <h1>How to use Github!</h1>
+<div id="config">
     <h2>Configuração</h2>
-    <pre>
 Nosso próximo passo é configurar nossa conta para trabalhar com o Git, e isto é feito pelo comando git config, onde podemos informar nosso nome e E-mail.
 Como estas configurações são globais, também devemos adicionar a opção --global ao comando, seguida dos valores entre aspas.
     <pre><code>git config --global user.name "Andre Baltieri"
 git config --global user.email "meuemail@github.com"</code></pre>
 Executando estes dois comandos, temos nosso nome e E-mail armazenados e a cada alteração que fizermos eles serão automaticamente adicionados.
 <img src="https://lh5.googleusercontent.com/ux-EDUCOLYDhTcYekc4YF3nr8jTguS2hDE1BtcEdyua16zn9SlSGab2kZGs6Tgi0rdKUWPvwYsq2k8o72SzwR5kp8nWdIMAy-WaQTVCzV42AKjCIG1KK1IQZoRllW0At6rz77Uym">
+    </div>
 
+<div id="creating">
     <h2>Criando um Repositório</h2>
 Agora começa a parte legal, vamos novamente até a página do Github e vamos criar nosso primeiro repositório. Repositório é o nome que damos ao nosso "projeto" no Github (Ou outras ferramentas de versionamento).
 Preencha o campo Repository Name com um nome sem espaços ou caracteres especiais, como por exemplo "meu-primeiro-repo". O campo descrição é opcional.
@@ -28,12 +30,14 @@ Você pode criar repositórios privados também, que só você ou pessoas que vo
 O repositório que acabamos de criar sempre estará disponível no endereço https://github.com/USUARIO/REPOSITORIO que no nosso caso é https://github.com/USUARIO/meu-primeiro-repositorio.
 Por enquanto, isto é tudo que queremos fazer no GitHub, vamos agora mover para nossa máquina e dar início a integração com ele.
 <img src="https://lh3.googleusercontent.com/7Nb2sOapCILDRTxqOcGq5iQ07z2bK1oyKhaY0R8VsVCf5cywxirQhFZnqgXhjazlqG0FRARTS0lqHDCksvswiEg6rwQIsKzuDwkwuvpNUEz54SE_CJJuFzUAI3AJWVjZDJd-j3CY">
+</div>
 
     <h2>Iniciando um Repositório</h2>
 Para começar a brincar com o Git/GitHub, vamos criar uma pasta em um local seguro. Para isto, abra um terminal de sua preferência e execute os comandos:
     <pre><code>mkdir meurepo
 cd meurepo
 code .</code></pre>
+<div id="ConfigGit">
     <h1>Configurando o Git e o GitHub</h1>
 Isto fará a criação de uma nova pasta chamada meurepo e abrirá a mesma com o Visual Studio Code. Caso não tenha o VS Code instalado e adicionado ao PATH, siga nosso guia de instala
 Em adicional, caso tenha problemas em executar o VS Code pelo termina, simplesmente abra-o, vá em File > Open Folder e selecione a pasta que acabamos de criar.
@@ -41,6 +45,7 @@ Com o Visual Studio Code aberto na pasta que criamos, vamos criar um novo arquiv
 Por padrão, todo repositório no GitHub tenta buscar um arquivo README.md na raiz do projeto para exibi-lo na página inicial do repositório.
 Os arquivos ".md" são no formato MarkDown, que é uma espécie de linguagem de marcação, assim como o HTML.
 Abra o arquivo README.md e coloque o seguinte código nele.
+</div>
     <h2>Meu Primeiro Repositório</h2>
 O Git/GitHub são legais!
 Não se preocupe em entender o MarkDown neste momento, depois você pode entrar em mais detalhes dele por sua conta.
@@ -50,6 +55,7 @@ Para isto, utilizamos o comando init do Git, para definir que temos um repositó
 Não precisamos nos preocupar inicialmente com esta pasta gerada, aliás, elas nem vai aparecer para nós, é ocultada automaticamente e não devemos mexer nela.
 Ainda no Visual Studio Code, pressione CTRL (CMD)+` para abrir o terminal ou acesse o menu Terminal > New Terminal.
 Na nova janela que se abrirá, execute o seguinte comando.
+<div id="FirstRepo">
     <pre><code>git init</code></pre>
 Se tudo deu certo, você receberá a mensagem "Initialized empty Git repository in C:/dev/meurepo/.git/". Pronto, temos nosso repositório iniciado.
 Note que podemos executar estes comandos em qualquer terminal FORA do Visual Studio Code também. Só realizamos por dentro do VS Code para facilitar.
@@ -75,14 +81,18 @@ Os comentários podem ser adicionados utilizando o parâmetro "-m", seguido pelo
 Desta forma, nosso primeiro comando de commit ficará assim:
     <code>git commit -m "Adicionado arquivo readme.md"</code>
 Neste momento, localmente está tudo pronto, e já podemos enviar nossas informações para o servidor.
+</div>
+<div id="LigandoREPO">
     <h2>Ligando os Repositórios</h2>
 Até o momento temos dois repositórios distintos, o local (meurepo) e o remoto (meu-primeiro-repositorio), inclusive com nomes diferentes.
 Embora tenhamos adicionado um arquivo e comitado as informações locais, ainda não especificamos para onde vão estas informações no servidor (GitHub).
 Para realizar esta ação, vamos utilizar o comando remote, seguido pela opção add origin, que vai informar para qual repositório do GitHub as informações locais serão enviadas.
 O comando remote add origin é seguido pela URL do repositório, conforme vimos anteriormente. Neste caso, o comando fica:
     <code>git remote add origin https://github.com/USUARIO/meu-primeiro-repositorio.git
-Pronto, temos agora uma ligação deste repositório local com o remoto e já podemos fazer o envio das informações.
-Branchs
+Pronto, temos agora uma ligação deste repositório local com o remoto e já podemos fazer o envio das informações.</code>
+
+<strong>Branchs</strong>
+
 Antes de aprendermos o comando para enviar as informações para o repositório remoto, precisamos entender o conceito de Branchs.
 Branchs são ramificações do nosso código onde podemos copiar uma versão específica e trabalhar sobre ela, sem afetar a versão principal.
 Todo repositório que criamos, já vem com uma Branch chamada Master por padrão.
@@ -103,6 +113,7 @@ git push -u origin master
 Pronto, neste momento, serão enviados os arquivos para o servidor e você poderá ver o resultado acessando a URL do repositório, que no caso é https://github.com/USUARIO/meu-primeiro-repositorio.
 Atualizando os arquivos locais
 Em inglês os comandospush e pull são usados para empurrar e puxar, e cuidado, push é empurrar e pull e puxar, então isto pode te confundir.
+</div>
     <h1>Meu primeiro repositório</h1>
 A seguir, estão listados os passos necessários para criar e trabalhar em um repositório utilizando o Git e o GitHub.
     <h2>Passos</h2>
@@ -137,7 +148,8 @@ Abra novamente o arquivo README.md e poderá conferir que temos a versão que at
 Utilizando a integração com Visual Studio Code
 Embora nossa sugestão seja aprender e entender os comandos do Git, você pode facilmente realizar estas ações (Push/Pull) diretamente pelo Visual Studio Code.
 O VS Code possui uma ótima integração com o Git, basta pressionar CTRL (CMD)+SHIFT+G para ir a tela do repositório. Nela você verá todas as alterações, conseguirá comitar e enviar/receber os arquivos.
-Crie outros repositórios para brincar e testar. É importante aprender estes co
+Crie outros repositórios para brincar e testar. É importante aprender estes conceitos.
+<div id="cloning">
         <h1>Clonando um repositório</h1>
     Até o momento trabalhamos com a criação de um repositório local, porém, podemos clonar um repositório já existente em nossa máquina utilizando o comando git clone.
         
@@ -153,6 +165,7 @@ Crie outros repositórios para brincar e testar. É importante aprender estes co
     Note que no final tem um ".git". Pronto, temos o repositório local novamente e você pode executar os push/pull para enviar ou receber arquivos nele.
         
     <strong>Pronto, estes foram seus primeiros passos com Git e GitHub!</strong>
-        </body>
+    </div>
+    </body>
+</pre>
 </html>
-    </pre>
