@@ -33,3 +33,7 @@ body {
   #config img {
     width: 20%;
   }
+  #ConfigGit {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
