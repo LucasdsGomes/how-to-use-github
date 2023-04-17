@@ -13,9 +13,10 @@
     <h2>Configuração</h2>
 Nosso próximo passo é configurar nossa conta para trabalhar com o Git, e isto é feito pelo comando git config, onde podemos informar nosso nome e E-mail.
 Como estas configurações são globais, também devemos adicionar a opção --global ao comando, seguida dos valores entre aspas.
+Executando estes dois comandos, temos nosso nome e E-mail armazenados e a cada alteração que fizermos eles serão automaticamente adicionados.
     <pre><code>git config --global user.name "Andre Baltieri"
 git config --global user.email "meuemail@github.com"</code></pre>
-Executando estes dois comandos, temos nosso nome e E-mail armazenados e a cada alteração que fizermos eles serão automaticamente adicionados.
+
 <img src="https://lh5.googleusercontent.com/ux-EDUCOLYDhTcYekc4YF3nr8jTguS2hDE1BtcEdyua16zn9SlSGab2kZGs6Tgi0rdKUWPvwYsq2k8o72SzwR5kp8nWdIMAy-WaQTVCzV42AKjCIG1KK1IQZoRllW0At6rz77Uym">
     </div>
 
@@ -152,7 +153,7 @@ Crie outros repositórios para brincar e testar. É importante aprender estes co
 <div id="cloning">
         <h1>Clonando um repositório</h1>
     Até o momento trabalhamos com a criação de um repositório local, porém, podemos clonar um repositório já existente em nossa máquina utilizando o comando git clone.
-        
+
     Vamos imaginar que você começou a trabalhar agora e o nosso repositório (meu-primeiro-repositorio) já está em andamento, sendo desenvolvido por uma equipe na qual você vai se juntar.
         
     Desta forma, não podemos utilizar o git init ou criar algo localmente, e sim o clone. Feche o Visual Studio Code e exclua a pasta meurepo que criamos previamente.
