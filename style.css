@@ -30,3 +30,6 @@ body {
     padding-bottom: 20px;
     padding-top: 20px;
   }
+  pre h2 img {
+    width: 20%;
+  }
