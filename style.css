@@ -14,6 +14,8 @@ body {
   
   /* estilo para o título */
   h1 {
+    padding-bottom: 20px;
+    padding-top: 20px;
     color: orange;
     text-align: center;
     font-size: 36px;
@@ -37,7 +39,15 @@ body {
     padding-top: 20px;
     padding-bottom: 20px;
   }
+  #ConfigGit h1 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
   #cloning h1 {
     padding-top: 30px;
     padding-bottom: 30px;
+  }
+  #FirstRepo h2 {
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
